@@ -1,0 +1,50 @@
+.rojo {
+	background-color: red;
+}
+.verde {
+	background-color: green;
+}
+.azul {
+	background-color: blue;
+}
+#caja {
+	background-color: red;
+	width: 13em;
+	height: 13em;
+}
+.sans-serif_rojo {
+	font-family: sans-serif;
+	color: red;
+}
+.sans-serif_verde {
+	font-family: sans-serif;
+	color: green;
+}
+.sans-serif_azul {
+	font-family: sans-serif;
+	color: blue;
+}
+.monospace_rojo {
+	font-family: monospace;
+	color: red;
+}
+.monospace_verde {
+	font-family: monospace;
+	color: green;
+}
+.monospace_azul {
+	font-family: monospace;
+	color: blue;
+}
+.cursive_rojo {
+	font-family: cursive;
+	color: red;
+}
+.cursive_verde {
+	font-family: cursive;
+	color: green;
+}
+.cursive_azul {
+	font-family: cursive;
+	color: blue;
+}

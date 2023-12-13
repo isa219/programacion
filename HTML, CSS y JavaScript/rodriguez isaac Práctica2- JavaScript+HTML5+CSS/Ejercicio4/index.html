@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+<script>
+function enviar() {
+nombre_js=document.formulario.nombre.value;
+apellido1_js=document.formulario.apellido1.value;
+apellido2_js=document.formulario.apellido2.value;
+correo_js=document.formulario.correo.value;
+afiliado_js=document.formulario.selector.selectedIndex;
+numero1=document.formulario.primer_numero.value;
+tam_numero1=document.formulario.primer_numero.value.length;
+numero2=document.formulario.segundo_numero.value;
+tam_numero2=document.formulario.segundo_numero.value.length;
+comprobacion_correo=correo_js.indexOf("@");
+
+if (nombre_js==0) {
+document.getElementById("nombre.error").innerHTML="Requerido"
+} else {
+document.getElementById("nombre.error").innerHTML=""
+}
+
+if (apellido1_js==0) {
+document.getElementById("apellido1.error").innerHTML="Requerido"
+} else {
+document.getElementById("apellido1.error").innerHTML=""
+}
+
+if (apellido2_js==0) {
+document.getElementById("apellido2.error").innerHTML="Requerido"
+} else {
+document.getElementById("apellido2.error").innerHTML=""
+}
+
+if (correo_js==0) {
+document.getElementById("correo.error").innerHTML="Requerido"
+} else {
+document.getElementById("correo.error").innerHTML=""
+}
+
+if (numero1==0||numero2==0||afiliado_js==0) {
+document.getElementById("ss.error").innerHTML="Requerido"
+} else {
+document.getElementById("ss.error").innerHTML=""
+}
+
+if (tam_numero1<7&&tam_numero1>0) {
+document.getElementById("ss.error").innerHTML="Escribe correctamente el primer numero";
+}
+if (tam_numero1>7) {
+document.getElementById("ss.error").innerHTML="Escribe correctamente el primer numero";
+}
+
+if (tam_numero2>2) {
+document.getElementById("ss.error").innerHTML="Escribe correctamente el segundo numero";
+}
+if (comprobacion_correo<0) {
+document.getElementById("correo.error").innerHTML="Escribe el correo electronico correctament";
+}
+
+}
+</script>
+<span id="titulo">Solicitud del Informe de Vida Laboral</span><br>
+<form name="formulario">
+<div id="uno">
+<span id="nombre">Nombre: </span> <input class="texto" type="text" name="nombre"> <span id="nombre.error" class="error""></span><br>
+<span id="apellido1">Primer Apellido: </span><input class="texto" type="text" name="apellido1"> <span id="apellido1.error" class="error"></span><br>
+<span id="apellido2">Segundo Apellido: </span><input class="texto" type="text" name="apellido2"> <span id="apellido2.error" class="error"></span><br>
+<span id="correo_texto">Correo Electrónico: </span><input type="email" name="correo" id="correo"> <span id="correo.error" class="error"></span><br>
+Número de afiliado a la S.S.: <select id="selector" name="selector"><option value="false"></option><option value="true">A CORUÑA</option></select> / <input id="primer_numero" name="primer_numero" type="text"> / <input id="segundo_numero" name="segundo_numero" type="text"> <span id="ss.error" class="error"></span>
+</form>
+</div>
+<input type="button" class="botones" value="Enviar" OnClick="enviar()"> <input type="button" class="botones" value="Borrar">
+</body>
+</html>

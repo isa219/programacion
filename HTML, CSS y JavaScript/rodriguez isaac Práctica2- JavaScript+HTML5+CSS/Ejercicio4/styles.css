@@ -1,0 +1,42 @@
+#titulo {
+	color: blue;
+	background-color: orange;
+}
+#uno {
+	background-color: yellow;
+	border: 0.3em black solid;
+	width: 40em;
+}
+#primer_numero {
+	width: 8em;
+}
+#segundo_numero {
+	width: 4em;
+}
+.botones {
+	color: blue;
+	font-size: 1.5em;
+	background-color: white;
+}
+#nombre {
+	margin-left: 4em;
+	margin-right: 4.2em;
+}
+#apellido1{
+	margin-left: 2em;
+	margin-right: 3em;
+}
+#apellido2 {
+	margin-left: 1.3em;
+	margin-right: 3em;
+}
+#correo_texto {
+	margin-left: 0.6em;
+	margin-right: 3.3em;
+}
+#selector {
+	width: 13em;
+}
+.error {
+	color: red;
+}

@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+<script>
+function resultado() {
+nota=0;
+unouno=document.formulario.uno[0].checked;
+unodos=document.formulario.uno[1].checked;
+unotres=document.formulario.uno[2].checked;
+unocuatro=document.formulario.uno[3].checked;
+
+if (unotres==true) {
+nota=nota+3.33;
+}
+
+dosuno=document.formulario.dos[0].checked;
+dosdos=document.formulario.dos[1].checked;
+dostres=document.formulario.dos[2].checked;
+doscuatro=document.formulario.dos[3].checked;
+
+if (doscuatro==true) {
+nota=nota+3.33;
+}
+
+tresuno=document.formulario.tres[0].checked;
+tresdos=document.formulario.tres[1].checked;
+trestres=document.formulario.tres[2].checked;
+trescuatro=document.formulario.tres[3].checked;
+
+if (tresuno==true) {
+nota=nota+3.33;
+}
+
+document.getElementById("final").innerHTML="Tu nota del examen es"+" "+nota+"%";
+
+}
+</script>
+<form name="formulario">
+<div>
+¿Cuál de los siguientes elementos no se considera que sea un marcado semantico?<br>
+<br>
+Seleccione una:<br>
+<input type="radio" name="uno">a. article<br>
+<input type="radio" name="uno">b. section<br>
+<input type="radio" name="uno">c. div<br>
+<input type="radio" name="uno">d. aside<br>
+</div>
+<br>
+<div>
+Esta creando una caracteristica de búsqueda que usa un marcado de formulario web para su sitio web. Cuando un usuario abre la página por primera vez, desea que el cursor del usuario aparezca en el campo Buscar de manera automatica. ¿Que atributo de entrada debe usar?<br>
+<br>
+Seleccione una:<br>
+<input type="radio" name="dos">a. formmethod<br>
+<input type="radio" name="dos">b. placeholder<br>
+<input type="radio" name="dos">c. form<br>
+<input type="radio" name="dos">d. autofocus<br>
+</div>
+<br>
+<div>
+Desea agregar un titulo antes de una tabla HTML que aparecera solo una vez. ¿Que etiqueta usa?<br>
+<br>
+Seleccione una:<br>
+<input type="radio" name="tres">a. &lt;caption&gt;<br>
+<input type="radio" name="tres">b. &lt;colgroup&gt;<br>
+<input type="radio" name="tres">c. &lt;title&gt;<br>
+<input type="radio" name="tres">d. &lt;thead&gt;<br>
+</div>
+<br>
+<div id="boton_caja">
+<input id="boton" type="button" value="Siguiente" OnClick="resultado()">
+</div><br>
+</form>
+<span id="final"></span>
+</body>
+</html>

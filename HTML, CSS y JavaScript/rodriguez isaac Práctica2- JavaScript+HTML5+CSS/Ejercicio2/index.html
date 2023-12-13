@@ -1,0 +1,135 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function calcular() {
+
+motor1=document.formulario.motor[0].checked;
+motor2=document.formulario.motor[1].checked;
+motor3=document.formulario.motor[2].checked;
+puerta1=document.formulario.puertas[0].checked;
+puerta2=document.formulario.puertas[1].checked;
+puerta3=document.formulario.puertas[2].checked;
+pintura1=document.formulario.pintura[0].checked;
+pintura2=document.formulario.pintura[1].checked;
+pintura3=document.formulario.pintura[2].checked;
+pintura4=document.formulario.pintura[3].checked;
+pintura5=document.formulario.pintura[4].checked;
+añadido1=document.formulario.añadido[0].checked;
+añadido2=document.formulario.añadido[1].checked;
+añadido3=document.formulario.añadido[2].checked;
+añadido4=document.formulario.añadido[3].checked;
+añadido5=document.formulario.añadido[4].checked;
+base=12000;
+correcto=0;
+if (motor2==true) {
+base=base+1500;
+}
+
+if (motor3==true) {
+base=base+3000;
+}
+
+if (puerta1==true && motor1 == true)
+ {
+base=base-2000;
+ }
+ 
+ if (puerta1 == true && motor2 == true ) {
+ alert("La configuracion de 3 puertas es incorrecta, arregle el fallo.")
+ correcto=1;
+ }
+
+ if (puerta1 == true && motor3 == true ) {
+ alert("La configuracion de 3 puertas es incorrecta, arregle el fallo.")
+ correcto=1;
+ } 
+ 
+ if (puerta3==true) {
+ base=base+1500;
+ }
+
+ 
+ if (pintura4==true) {
+ base=base-500;
+ }
+ if (pintura5==true) {
+ base=base-600;
+ }
+ 
+ if (añadido1==true && pintura1==true || añadido1==true && pintura2==true || añadido1==true && pintura3==true) {
+ base=base+750;
+ }
+ if (añadido1==true && pintura4==true) {
+ alert("La configuracion de pintura metalizada es incorrecta, arregle el fallo.")
+ correcto=1;
+ }
+ if (añadido1==true && pintura5==true) {
+ alert("La configuracion de pintura metalizada es incorrecta, arregle el fallo.")
+ correcto=1;
+ }
+ if (añadido2==true) {
+ base=base+200;
+ }
+ if (añadido3==true) {
+ base=base+800;
+ }
+ if (añadido4==true) {
+ base=base+340;
+ }
+ 
+  if (añadido5==true && puerta3==true) {
+ base=base+800;
+ }
+  if (añadido5==true && puerta1==true) {
+ alert("La configuracion de DVD es incorrecta, arregle el fallo.")
+correcto=1;
+ }
+   if (añadido5==true && puerta2==true) {
+ alert("La configuracion de DVD es incorrecta, arregle el fallo.")
+correcto=1;
+ }
+ 
+ if (correcto==1) {
+ document.getElementById("precio").innerHTML="Error";
+ } else {
+ document.getElementById("precio").innerHTML="El precio del vehiculo es "+base;
+ }
+ }
+</script>
+<form name="formulario">
+<table border="1">
+<tr>
+<td>Configuracion del coche</td>
+</tr>
+<tr>
+<td>Tipo de Motor<br><input type="radio" name="motor"> Gasolina <input type="radio" name="motor"> Diesel (+1500 E) <input type="radio" name="motor"> Hibrido (+3000 E)</td>
+</tr>
+<tr>
+<td>Tipo de Puertas<br><input type="radio" name="puertas"> 3 Puertas (-2000 E)(Solo con Gasolina) <input type="radio" name="puertas"> 5 Puertas <input type="radio" name="puertas"> Familiar (+1500 E) </td>
+</tr>
+</tr>
+<tr>
+<td>Tipo de Pintura<br><input type="radio" name="pintura"> Rojo <input type="radio" name="pintura"> Verde <input type="radio" name="pintura"> Naranja <input type="radio" name="pintura"> Blanco (-500 E) <input type="radio" name="pintura"> Negro (-600 E)</td>
+</tr>
+<tr>
+<td>Seleccionar las que se deseen:<br>
+<input type="checkbox" name="añadido"> Metalizada (+750 E)(Solo Rojo, Verde o Naranja)<br>
+<input type="checkbox" name="añadido"> LLantas (+200 E)<br>
+<input type="checkbox" name="añadido"> Climatizador (+800 E)<br>
+<input type="checkbox" name="añadido"> GPS (+340 E)<br>
+<input type="checkbox" name="añadido"> DVD (+800 E) (Solo modelo Familiar)</td>
+</tr>
+<tr>
+<td>
+Total a Cobrar:
+<input type="button" Value="Calcular" OnClick="calcular()"><br>
+
+</td>
+</tr>
+</table>
+</form>
+<span id="precio"></span>
+</body>
+</html>

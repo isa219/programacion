@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<script>
+function cambiar_texto() {
+texto=prompt("Introduzca texto");
+document.getElementById("caja").innerHTML=texto;
+}
+
+function cambiar_color_fondo() {
+fondo=prompt("Introduzca color de fondo: (rojo, verde o azul).");
+if (fondo=="rojo") {
+document.getElementById("caja").classList.add("rojo");
+} else if (fondo=="verde") {
+document.getElementById("caja").classList.add("verde");
+} else if (fondo==azul) {
+document.getElementById("caja").classList.add("azul");
+} else {
+	alert("No has escrito un valor correcto, vuelva a intentarlo")
+}
+
+document.getElementById("caja").classList.add("error");
+}
+
+function cambiar_tipo_color_letra() {
+color=prompt("Introduzca color de texto: (rojo, verde o azul)");
+tipo=prompt("Introduzca tipo de texto: (sans-serif, monospace o cursive)");
+if (color == "rojo") {
+	if (tipo=="sans-serif") {
+		document.getElementById("caja").classList.add("sans-serif_rojo");
+	} else if (tipo=="monospace") {
+		document.getElementById("caja").classList.add("monospace_rojo");
+	} else if (tipo=="cursive") {
+		document.getElementById("caja").classList.add("cursive_rojo");
+	} else {
+		alert("Has escrito mal el tipo de letra, vuelva a intentarlo")
+	}
+} else if (color == "verde") {
+	if (tipo=="sans-serif") {
+		document.getElementById("caja").classList.add("sans-serif_verde");
+	} else if (tipo=="monospace") {
+		document.getElementById("caja").classList.add("monospace_verde");
+	} else if (tipo=="cursive") {
+		document.getElementById("caja").classList.add("cursive_verde");
+	} else {
+		alert("Has escrito mal el tipo de letra, vuelva a intentarlo")
+	}
+} else if (color == "azul" ) {
+	if (tipo=="sans-serif") {
+		document.getElementById("caja").classList.add("sans-serif_azul");
+	} else if (tipo=="monospace") {
+		document.getElementById("caja").classList.add("monospace_azul");
+	} else if (tipo=="cursive") {
+		document.getElementById("caja").classList.add("cursive_azul");
+	} else {
+		alert("Has escrito mal el tipo de letra, vuelva a intentarlo")
+	}
+} else {
+alert("No has escrito uno de los unicos 3 colores elegibles")
+}
+}
+
+</script>
+<body>
+<div id="caja">Este es el contenido del div1</div>
+<form name="form1">
+<input type="button" value="Cambiar texto" OnClick="cambiar_texto()"><br>
+<input type="button" value="Cambiar color de fondo" OnClick="cambiar_color_fondo()"><br>
+<input type="button" value="Cambiar tipo y color de letra" OnClick="cambiar_tipo_color_letra()">
+</form>
+</body>
+</html>
