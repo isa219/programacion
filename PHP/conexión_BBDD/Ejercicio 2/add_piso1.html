@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> lang="es">
+<head>
+	<meta chasrset="UTF-8">
+	<title>Insertar Noticia</title>
+</head>
+<body>
+	<h2>Insertar Noticia</h2>
+	
+	<form action="add_piso2.php" metdhoth="post">
+		<label for="titulo">Titulo:</label>
+		<input type="text" name="titulo" required<br>
+		
+		<label for="texto">Texto:</label>
+		<textarea name="texto" required></textarea><br>
+		
+		<label for="categoria">Categoría:</label>
+		<select name="categoria">
+			<option value="promociones">Promociones</option>
+			<option value="ofertas">Ofertas</option>
+			<option value="costas">Costas</option>
+		</select><br>
+		
+		<label for="fecha">Fecha: </label>
+		<input type="date" name="fecha" required><br>
+ 
+		<label for="imagen">Imagen: </label>
+		<input type="text" name="imagen" required><br>
+ 
+		<input type="submit" value="Insertar">
+	<form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Matriculación</title>
+</head>
+<body>
+<div>
+<form action="php/datos_alumno.php" method="post">
+DATOS DEL ALUMNO:<br>
+Introduzca su <span id="enseñanza">Enseñanza:</span><br>
+nombre:<input type="radio" name="op" id="secundaria" value="Secundaria"> Secundaria <input type="radio" name="op" value="Batchillerato" id="batch"> Batchillerato
+<input type="text" name="nombre" id="nombre"> <input type="radio" name="op" id="ciclo" value="un ciclo medio"> Ciclo Medio <input type="radio" name="op" value="un ciclo superior"> Ciclo Superior<br>
+Introduzca su<br>
+telefono:<br>
+<input type="number" name="telefono"> Matriculado <input type="checkbox" name="matricula"><br>
+Mostrar datos <select name="datos"><option value="Por pantalla">Por Pantalla</option><option value="En Archivo datos.txt">En Archivo datos.txt</option></select>
+</div>
+<input type="submit" value="Enviar datos">
+</form>
+</body>
+</html>
+
+
+<!--nombre,telefono,matricula,datos,op
