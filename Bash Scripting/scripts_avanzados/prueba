@@ -1,0 +1,7 @@
+#!/bin/bash
+res=`echo $1 | grep -vE [a-z]`
+if [ $res  ]; then
+echo es numero
+else
+echo no es numero
+fi

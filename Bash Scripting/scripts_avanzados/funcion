@@ -1,0 +1,10 @@
+#!/bin/bash
+usuario_existe() {
+	existe=sudo cat /etc/passwd | cut -d: -f1 | grep -e "\b$1\b"
+	if [ $existe -eq "" ];then
+		return echo "No existe."
+	else
+		return echo "Existe"
+	fi
+}
+usuario_existe

@@ -1,0 +1,18 @@
+#!/bin/bash
+es_directorio() {
+	if [ -d $1 ];then
+		solucion=1
+		return $solucion
+	else
+		solucion=0
+		return $solucion
+	fi
+}
+read -p "Dime una ruta absoluta de un directorio: " ruta
+directorio=`es_directorio $ruta`
+echo $directorio
+if [ $directorio == 1 ]; then
+	echo "correcto"
+else
+	echo "incorrecto"
+fi
